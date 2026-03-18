@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>موقع المدرس</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <div class="brand">Teacher Portal</div>
+        <div class="nav-links">
+          <a href="#courses">الكورسات</a>
+          <a href="#announcements">الإعلانات</a>
+          <a href="#contact">تواصل معنا</a>
+        </div>
+      </nav>
+
+      <section class="hero-content container">
+        <div>
+          <p class="eyebrow">منصة تعليمية بسيطة ومتصلة بقاعدة بيانات</p>
+          <h1 id="teacher-name">جاري تحميل بيانات المدرس...</h1>
+          <p id="teacher-bio"></p>
+          <div class="hero-meta">
+            <span id="teacher-specialization"></span>
+            <span id="teacher-phone"></span>
+            <span id="teacher-email"></span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>ليه الموقع ده مفيد؟</h2>
+          <ul>
+            <li>عرض الحصص والكورسات بشكل احترافي.</li>
+            <li>استقبال استفسارات الطلاب وحفظها في قاعدة بيانات.</li>
+            <li>سهولة تطويره لاحقًا لإضافة تسجيل دخول أو لوحة تحكم.</li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section container" id="courses">
+        <div class="section-title">
+          <p>الكورسات المتاحة</p>
+          <h2>برامج تعليمية مناسبة لكل المراحل</h2>
+        </div>
+        <div id="courses-grid" class="grid"></div>
+      </section>
+
+      <section class="section alt-section" id="announcements">
+        <div class="container">
+          <div class="section-title">
+            <p>آخر التحديثات</p>
+            <h2>الإعلانات والمواعيد المهمة</h2>
+          </div>
+          <div id="announcements-list" class="announcements"></div>
+        </div>
+      </section>
+
+      <section class="section container" id="contact">
+        <div class="section-title">
+          <p>تواصل معنا</p>
+          <h2>ابعت استفسارك وسيتم حفظه مباشرة في قاعدة البيانات</h2>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <div class="field-group">
+            <label for="student_name">اسم الطالب</label>
+            <input id="student_name" name="student_name" type="text" required />
+          </div>
+
+          <div class="field-group">
+            <label for="phone">رقم الهاتف</label>
+            <input id="phone" name="phone" type="tel" required />
+          </div>
+
+          <div class="field-group">
+            <label for="grade_level">المرحلة الدراسية</label>
+            <input id="grade_level" name="grade_level" type="text" required />
+          </div>
+
+          <div class="field-group full-width">
+            <label for="message">الرسالة</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit">إرسال الاستفسار</button>
+          <p id="form-status" class="form-status"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
